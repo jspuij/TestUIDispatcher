@@ -1,0 +1,11 @@
+﻿@page "/"
+
+	<FetchData UIDispatcher=@UIDispatcher />
+	<FetchData UIDispatcher=@UIDispatcher />
+
+
+@code
+{
+	private Task UIDispatcher(Func<Task> workItem) =>
+		InvokeAsync(workItem);
+}
